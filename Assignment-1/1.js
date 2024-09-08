@@ -1,95 +1,83 @@
-const money = 0;
-if(money){
-    console.log("Dont spend it all");
-}else{
-    console.log("yOU SHOULD GET A JOB");
-}
+//Variables
+//1)
+var fullname="Dinesh Reddy";
+const age = 19;
+const city = "Visakhapatnam";
+const Student = true;
+let nullValue = null;    
+let undefinedValue;   
 
-let height =0;
-if(height){
-    console.log("Height is defined");
-}else{
-    console.log("Height is Undefined");
-}
+//2)
+const pi =3.14159;
 
+//3)
+const greeting = "Hello, world!";
 
-// const age ="18";
-// if(age==18){
-//     console.log("You can  Vote");
-// }
-// if(age===18){
-//     console.log("You can vote triple===");
-// }
+//4)
+const isSunny = true;
 
-// const favourite = Number(prompt("What is your facourite number?"));
-// console.log(favourite,typeof favourite);
-// if(favourite === 23){
-//     console.log("Cool 23 is an amazing number");
-// }else if(favourite===7){
-//     console.log("7 is number which have value of 7");
-// }else{
-//     console.log("Number is not from 23 and 7");
-// }
+const favouriteNumber=3509;
 
-////Logical Operators: &&,||
-const hasDriversLicense = true;
-const hasGoodVision = false;
+//DataTypes
+//1)
+console.log(`The datatype of name is ${typeof fullname}`);
+console.log(`The datatype of age is ${typeof age}`);
+console.log(`The datatype of city is ${typeof city}`);
+console.log(`The datatype of student is ${typeof Student}`);
+console.log(`The datatype of nullValue is ${typeof nullValue}`);
+console.log(`The datatype of undefinedValue is ${typeof undefinedValue}`);
+console.log(`The datatype of pi is ${typeof pi}`);
+console.log(`The datatype of greeting is ${typeof greeting}`);
+console.log(`The datatype of isSunny is ${typeof isSunny}`);
+console.log(`The datatype of favouriteNumber is ${typeof favouriteNumber}`);
 
-console.log(hasDriversLicense && hasGoodVision);
-console.log(hasDriversLicense || hasGoodVision);
+//2)
+var mixedValue = "1dineshtrue";
+mixedValue = true;
+mixedValue = 54;
+//3)
+console.log(typeof mixedValue);
 
-console.log(!(hasDriversLicense && hasGoodVision));
-console.log(!(hasDriversLicense || hasGoodVision));
+//Operators
+//1)
+var a=10;
+var b= 5;
+var c ="10";
+console.log(`The addition of ${a} and ${b} is ${a+b}`);
+console.log(`The subtraction of ${a} and ${b} is ${a-b}`);
+console.log(`The multiplication of ${a} and ${b} is ${a*b}`);
+console.log(`The division of ${a} and ${b} is ${a/b}`);
+console.log(`The modulus of ${a} and ${b} is ${a%b}`);
+console.log(`The exponentiation of ${a} and ${b} is ${a**b}`);
 
-if(hasDriversLicense && hasGoodVision){
-    console.log("Sarah is able to drive");
-}else{
-    console.log("Some else should drive");
-}
+//2)
+console.log(a==b);
+console.log(a!=b);
+console.log(a>=b);
+console.log(a<=b);
+console.log(a>b);
+console.log(a<b);
+console.log(a==c);
+console.log(a===c);
 
-const isTired = false;
-if(hasDriversLicense && hasGoodVision && isTired){
-    console.log("HI");
-}
+//3)
+if(a>5 && b>=5){console.log("Greater");}
+if(a<=10 || b<=10){console.log("Lower");}
+if(!(a && b)){console.log("It is not working");}
 
+//4)
+const age1 = 19;
+const canVote = age1 >= 18 ? "Yes, you can vote." : "No, you cannot vote.";
+console.log(canVote,typeof canVote);
 
-const scoreDolphins =(96+108+89)/3;
-const scoreKoalas =(88+91+110)/3;
+//Additional Tasks
+//1)
+var Ftemp = 211;
+var Ctemp = (Ftemp-32)*(5/9);
+console.log(Ctemp);
 
-console.log(scoreDolphins,scoreKoalas);
-if(scoreDolphins>scoreKoalas){
-    console.log("Dolphins win the trophy");
-}else if(scoreKoalas>scoreDolphins){
-    console.log("Koalas win the trophy");
-}else if(scoreDolphins===scoreKoalas){
-    console.log("The match is tied");
-}
-
-const day = "friday";
-switch(day){
-    case "monday":
-        console.log("Plan course structure");
-        console.log("Got to coding meetup");
-        break;
-
-    case "tuesday":
-        console.log("prepare theory videos");
-        break;
-        
-    case "wednesday":
-        break;
-    case "thursday":
-        console.log("Write code examples");
-        break;
-    case "friday":
-        console.log("Go to a movie");          
-    case "saturday":
-        break;
-    case "sunday":
-        console.log("Go to ground");
-        break
-    default:
-        console.log("Not a valid day");
-
-
-}
+//2)
+var agee = 54;
+if(agee<18 && agee>0){console.log("Minor");}
+else if(agee>=18 && agee<60){console.log("Adult");}
+else if(agee>=60){console.log("Senior Citizen");}
