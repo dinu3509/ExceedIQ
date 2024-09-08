@@ -179,7 +179,8 @@ function factorial(n) {
 console.log(`Value of 6 factorial using iterative method${factorial(6)}`);
 
 
-
+//2)
+/*Writing clean, well-structured, and efficient functions enhances code readability, maintainability, and reduces bugs, making it easier for developers to understand and modify the code. Efficient functions also improve performance and resource usage, leading to better overall application performance. */
 
 
 
