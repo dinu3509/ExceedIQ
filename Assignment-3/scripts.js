@@ -11,7 +11,7 @@ const person ={
 person.greet();
 
 
-//) Arrow Functions :
+//2) Arrow Functions :
 const sayHello = () =>{
     return `Hello This is ${this.firstName}`;
 }
@@ -131,4 +131,176 @@ function updateDish(name, newPrice, newIngredients) {
     } else {
         console.log(`${name} not found in the menu.`);
     }
+}
+
+function calculateTotal(order) {
+    const total = order.reduce((sum, dishName) => {
+        const dish = restaurantMenu.find(dish => dish.name === dishName);
+        return dish ? sum + dish.price : sum;
+    }, 0);
+    console.log(`The total price of your order is $${total}.`);
+    return total;
+}
+addDish('Paneer Tikka', 10, ['paneer', 'spices', 'yogurt']);
+removeDish('Dragon Chicken');
+updateDish('Chicken Biryani', 16, ['chicken', 'rice', 'spices', 'yogurt', 'mint']);
+
+const order = ['Chicken Biryani', 'Apricot Delight'];
+calculateTotal(order); 
+
+
+//Spread Operator
+//- Use the spread operator to create a new array from an existing array.
+const array = [1, 2, 3, 4, 5];
+const spreadArray = [...array];
+console.log(spreadArray)
+
+//- Use the spread operator to copy an object and modify its properties.
+const dinesh = {
+    name: 'Dinesh Reddy',
+    age: 19,
+    occupation: 'Student'
+};
+
+const dinesh2 = { ...dinesh, age: 30 };
+console.log(dinesh);
+console.log(dinesh2);
+
+//- Use the spread operator to combine multiple arrays into a single array.
+
+const a1 = ['d', 'i', 'n'];
+const a2 = ['e', 's', 'h'];
+const a3 = [3, 5, ,0 ,9];
+
+const a4 = [...a1, ...a2, ...a3];
+
+console.log(a4); 
+
+let n = "Dinesh";
+splitName = n.split(''); 
+console.log(splitName);
+
+let joinedName = splitName.join(''); 
+console.log(joinedName);
+
+let paddedStart = n.padStart(10, '*'); 
+console.log(paddedStart);
+
+
+let paddedEnd = n.padEnd(10, '*');  
+console.log(paddedEnd);
+
+
+let slicedName = n.slice(0, 3); 
+console.log(slicedName);
+
+let reversedn = n.split('').reverse().join('');
+console.log(reversedn);
+function checkPalindrome(str){
+    if (str==str.split('').reverse().join('')){
+        console.log("It is Palindrome");
+    }else{
+        console.log("It is not a palindrome");
+    }
+}
+checkPalindrome('DiD');
+checkPalindrome('DiDi');
+
+//- Use string methods like `slice`, `repeat`, `toLowerCase`, `toUpperCase`, `trim`, `replace`, and `replaceAll` for various string operations.
+let namee = "  Dinesh    ";
+
+let slicedName1 = namee.slice(0,3);
+let repeated = namee.repeat(4);
+let lowerCase = namee.toLowerCase();
+let upperCase = namee.toUpperCase();
+let trimmed = namee.trim();
+let replaced = namee.replace('D','V');
+namee = "Dinesh ReDDy";
+let replaceAll = namee.replaceAll('D','Y');
+console.log(`slicedName1-${slicedName1}\nrepeated->${repeated}\nlowerCase->${lowerCase}\nupperCase->${upperCase}\ntrimmed->${trimmed}\nreplaced->${replaced}\nreplaceAll->${replaceAll
+
+}`);
+
+
+//Booleans, length, indexOf, lastIndexOf, map:
+
+//- Use boolean values and operators in conditional statements.
+let isEducated =true;
+let isWorking =false;
+
+if(isEducated && isWorking){
+    console.log("Person is educated and as well as earning")
+}else if(isEducated){
+    console.log("Person is educated but not earning.")
+}else if(isWorking){
+    console.log("Person is not educated but earning.")
+}else{
+    console.log("Person is not educated and is not earning as well.")
+}
+
+//- Determine the length of strings and arrays using the `length` property.
+const str1 = "Hello, World!";
+const str1Length = str1.length;
+console.log(`Length of string: ${str1Length}`); 
+
+const arr = [1, 2, 3, 4, 5];
+const arrLength = arr.length;
+console.log(`Length of array: ${arrLength}`);
+
+
+
+//- Find the index of a substring within a string using `indexOf` and `lastIndexOf`.
+const sampleString = "Dinesh is learning JavaScript";
+const firstIndex = sampleString.indexOf("learning");
+console.log(`First index of "learning": ${firstIndex}`);
+const lastIndex = sampleString.lastIndexOf("a");
+console.log(`Last index of "a": ${lastIndex}`); 
+
+//- Use the `map` method to transform elements in an array into a new array.
+const numbers = [1, 2, 3, 4, 5];
+const squaredNumbers = numbers.map(num => num * num);
+console.log(`Squared Numbers: ${squaredNumbers}`);
+
+
+//Set, delete, keys, pop, for...of loop, Map Iteration:
+
+//- Create a Set and add elements to it.
+const friends = new Set();
+friends.add("Rohit");
+friends.add("Deepak");
+friends.add("Sohit");
+friends.add("None");
+console.log(friends);
+
+//- Remove elements from a Set using `delete`.
+friends.delete("None");
+console.log(friends);
+
+//- Iterate over a Set using a `for...of` loop.
+for(let friend of friends){
+    console.log(friend);
+}
+
+//- Convert an object to a Map and vice versa.
+const student = {name:'Dinesh Reddy',age:19};
+console.log(student);
+const studentmap= new Map(Object.entries(student));
+
+console.log(studentmap);
+const mapToObj = Object.fromEntries(studentmap);
+console.log(mapToObj); 
+
+//- Perform operations on Maps using `get`, `set`, `delete`, `keys`, `has`, and `clear`.
+
+studentmap.set('location', 'India');
+studentmap.set('profession', 'Engineer');
+studentmap.set('hobby', 'Gaming');
+
+console.log(studentmap.get('name'));
+
+studentmap.delete('age');
+console.log(studentmap);
+
+for (let key of studentmap.keys()) {
+    console.log(key);
 }
